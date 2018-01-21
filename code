@@ -1,3 +1,19 @@
+var games = {
+    number_guess: function(name) {
+        var difficulty, number, guess, guesses, maxGuesses, score;
+        alert("On harder difficulties, the numbers will be larger, you will have fewer guesses, and earn more points.");
+        difficulty = prompt("What difficulty would you like to play at?\nThere is easy, medium, hard, impossible, and death.");
+        switch (difficulty) {
+            case "easy":
+                alert("The number will be from 0 to 50, you will have 20 guesses, and you will have a score multiplier of 1.0");
+                break;
+        }
+    },
+    rock_paper_scissors: function(name) {
+    
+    }
+};
+
 function init() {
     var a0 = prompt("What's your name?");
     while (a0 !== undefined) {
@@ -5,7 +21,7 @@ function init() {
         a0 = prompt("What's your name?");
     }
     alert("Hello, " + a0 + ".");
-    a1 = prompt("What do you want me to do?\nPlease type in lowercase letters.");
+    a1 = prompt("What do you want me to do?\nAlways type in lowercase letters.");
     switch (a1) {
         case "go away":
         case "shut down":
@@ -34,7 +50,20 @@ function init() {
         case "game":
         case "play":
         case "play game":
-            
+            alert("There is rock paper scissors, and number guessing.
+            var a3 = prompt("Which game do you want to play?");
+            switch (a3) {
+                case "rock paper scissors":
+                case "rockpaperscissors":
+                    games.rock_paper_scissors(a0);
+                    break;
+                case "number guessing":
+                case "number guess":
+                case "number":
+                case "guess":
+                    games.number_guess(a0);
+                    break;
+            }
             break;
     }
 }
