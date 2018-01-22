@@ -100,7 +100,7 @@ function init() {
         case "game":
         case "play":
         case "play game":
-            alert("There is rock paper scissors, and number guessing.
+            alert("There is rock paper scissors, and number guessing.");
             var a3 = prompt("Which game do you want to play?");
             switch (a3) {
                 case "rock paper scissors":
