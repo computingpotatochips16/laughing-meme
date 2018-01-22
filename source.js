@@ -14,7 +14,7 @@ var games = {
         var difficulty, number, guess, guesses, maxGuesses, score, multiplier, scoreEarned;
         alert("On harder difficulties, the numbers will be larger, you will have fewer guesses, and earn more points.");
         difficulty = prompt("What difficulty would you like to play at?\nThere is easy, medium, hard, impossible, and death.");
-        switch (difficulty.toLowerCase) {
+        switch (difficulty.toLowerCase()) {
             case "easy":
                 alert("The number will be from 0 to 50, you will have 20 guesses, and you will have a score multiplier of 1.0");
                 number = Math.round(50 * Math.random());
@@ -66,19 +66,16 @@ var games = {
 
 function init() {
     var a0 = prompt("What's your name?");
-    while (a0 !== undefined) {
-        alert("Tell me your name.");
-        a0 = prompt("What's your name?");
-    }
     alert("Hello, " + a0 + ".");
-    a1 = prompt("What do you want me to do?\nAlways type in lowercase letters.");
-    switch (a1) {
+    a1 = prompt("What do you want me to do?");
+    switch (a1.toLowerCase()) {
         case "go away":
         case "shut down":
         case "shut up":
         case "off":
         case "turn off":
         case "leave":
+        case "die":
             var a2 = confirm("Are sure you want me to leave?");
             for (var i = 0; i < 20; i++) {
                 alert("Shutting down " + i * 5 + "% complete.");
@@ -115,5 +112,146 @@ function init() {
                     break;
             }
             break;
+        case "who are you":
+            alert("I am a JavaScript program.");
+            break;
+        case "calculator":
+        case "calculate":
+        case "calculate something":
+        case "math":
+        case "do math":
+        case "do math for me":
+        case "add":
+        case "addition":
+        case "+":
+        case "-":
+        case "*":
+        case "x":
+        case "/":
+        case "^":
+        case "%":
+        case "sin":
+        case "cos":
+        case "sqrt":
+        case "square root":
+        case "cube root":
+        case "cbrt":
+        case "tan":
+        case "sine":
+        case "cosine":
+        case "tangent":
+        case "arcsin":
+        case "arcsine":
+        case "arccos":
+        case "arccosine":
+        case "arctan":
+        case "arctangent":
+        case "inverse sine":
+        case "inverse cosine":
+        case "inverse tangent":
+        case "secant":
+        case "sec":
+        case "csc":
+        case "cot":
+        case "cosecant":
+        case "cotangent":
+        case "arcsecant":
+        case "arcsec":
+        case "arccosecant":
+        case "arccot":
+        case "arccotangent":
+        case "inverse secant":
+        case "inverse cosecant":
+        case "inverse cotangent":
+        case "asin":
+        case "acos":
+        case "atan":
+        case "asec":
+        case "acsc":
+        case "acot":
+        case "sinh":
+        case "hyperbolic sine":
+        case "cosh":
+        case "hyperbolic cosine":
+        case "tanh":
+        case "hyperbolic tangent":
+        case "sech":
+        case "hyperbolic secant":
+        case "csch":
+        case "hyperbolic cosecant":
+        case "coth":
+        case "hyperbolic cotangent":
+        case "hyperbolic sin":
+        case "hyperbolic cos":
+        case "hyperbolic tan":
+        case "hyperbolic sec":
+        case "hyperbolic csc":
+        case "hyperbolic cot":
+        case "sin^-1":
+        case "cos^-1":
+        case "tan^-1":
+        case "sec^-1":
+        case "csc^-1":
+        case "cot^-1":
+        case "inverse hyperbolic sine":
+        case "arcsinh":
+        case "inverse hyperbolic sin":
+        case "asinh":
+        case "sinh^-1":
+        case "inverse hyperbolic cosine":
+        case "arccosh":
+        case "inverse hyperbolic cos":
+        case "acosh":
+        case "cosh^-1":
+        case "inverse hyperbolic tangent":
+        case "arctanh":
+        case "inverse hyperbolic tan":
+        case "atanh":
+        case "tanh^-1":
+        case "inverse hyperbolic secant":
+        case "arcsech":
+        case "inverse hyperbolic sec":
+        case "asech":
+        case "sech^-1":
+        case "inverse hyperbolic cosecant":
+        case "arccsch":
+        case "inverse hyperbolic csc":
+        case "acsch":
+        case "csch^-1":
+        case "inverse hyperbolic cotangent":
+        case "arccoth":
+        case "inverse hyperbolic coth":
+        case "acoth":
+        case "coth^-1":
+        case "subtract":
+        case "subtraction":
+        case "multiply":
+        case "times":
+        case "multiplication":
+        case "division":
+        case "divide":
+        case "mathematics":
+        case "turn on calculator":
+            alert("You have turned on the calculator");
+            alert("There is addition, subtraction, multiplication, division, radicals, exponents, modulo, logarithm, and trigonometry."); 
+            var a4 = prompt("What operation would you like to perform?");
+            switch (a4.toLowerCase()) {
+                case "add":
+                case "addition":
+                case "+":
+                    var addends = [];
+                    addends.push(parseInt(prompt("What is your first addend?"),10));
+                    var another = confirm("Would you like to add another addend?");
+                    while (another) {
+                        addends.push(parseInt(prompt("What is the new addend?"),10));
+                        another = confirm("Would you like to add another addend?");
+                    }
+                    var sum = 0;
+                    for (var i = 0; i < addends.length; i++) {
+                        sum += addends[i];    
+                    }
+                    alert("The sum is " + sum + ".");
+                    break;
+            }
     }
 }
