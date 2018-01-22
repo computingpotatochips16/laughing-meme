@@ -1,0 +1,40 @@
+function init() {
+    var a0 = prompt("What's your name?");
+    while (a0 !== undefined) {
+        alert("Tell me your name.");
+        a0 = prompt("What's your name?");
+    }
+    alert("Hello, " + a0 + ".");
+    a1 = prompt("What do you want me to do?\nPlease type in lowercase letters.");
+    switch (a1) {
+        case "go away":
+        case "shut down":
+        case "shut up":
+        case "off":
+        case "turn off":
+        case "leave":
+            var a2 = confirm("Are sure you want me to leave?");
+            for (var i = 0; i < 20; i++) {
+                alert("Shutting down " + i * 5 + "% complete.");
+            }
+            throw new Error("Successfully shut down.");
+            break;
+        case "turn on":
+        case "on":
+            alert("I am already on.");
+            break;
+        case "joke":
+        case "funny":
+        case "tell a joke":
+        case "be funny":
+        case "tell me a joke":
+            alert("I am a computer. I am not funny.");
+            break;
+        case "play a game":
+        case "game":
+        case "play":
+        case "play game":
+            
+            break;
+    }
+}
