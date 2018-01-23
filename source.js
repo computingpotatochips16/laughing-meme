@@ -127,6 +127,8 @@ function init() {
         case "-":
         case "*":
         case "x":
+        case "X":
+        case "\";
         case "/":
         case "^":
         case "%":
@@ -239,6 +241,7 @@ function init() {
                 case "add":
                 case "addition":
                 case "+":
+                case "plus":
                     var addends = [];
                     addends.push(parseInt(prompt("What is your first addend?"),10));
                     var another = confirm("Would you like to add another addend?");
@@ -251,6 +254,41 @@ function init() {
                         sum += addends[i];    
                     }
                     alert("The sum is " + sum + ".");
+                    break;
+                case "-":
+                case "subtract":
+                case "subtraction":
+                case "minus":
+                    var large = parseInt(prompt("What is your first number?"), 10);
+                    var small = parseInt(prompt("What is your second number?"),10);
+                    alert("The difference is " + large - small + ".");
+                    break;
+                case "*":
+                case "times":
+                case "multply":
+                case "multiplication":
+                case "x":
+                case "X":
+                    var factors = [];
+                    factors.push(parseInt(prompt("What is your first factor?"),10));
+                    var newF = confirm("Would you like to add another factor?");
+                    while (newF) {
+                        factors.push(parseInt(prompt("What is your new factor?"),10));
+                        newF = confirm("Would you like to add another factor?");
+                    }
+                    var product = 1;
+                    for (var j = 0; j < factors.length; j++) {
+                        product *= factors[i];    
+                    }
+                    break;
+                case "/":
+                case "\":
+                case "divide":
+                case "division":
+                case "fraction":
+                    var dividend = parseInt(prompt("What is your dividend?"),10);
+                    var divisor = parseInt(prompt("What is your divisor?"), 10);
+                    alert("The quotient is " + dividend / divisor + ".");
                     break;
             }
     }
