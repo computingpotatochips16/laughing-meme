@@ -3,6 +3,22 @@ function afunc() {
     alert("Hello, " + a1 + ".");
     return a1;
 };
+
+var files = [];
+
+var file = function (content, name) {
+    this.content = content;
+    this.name = name;
+    this.size = content.length;
+};
+
+file.prototype.open = function () {
+    alert("File " + this.name + " opened.");
+    for (var i = 0; i < content.length; i++) {
+        alert(content[i]);
+    }
+};
+
 var shutdown = false;
 var memorynum = 0;
 var memory = "";
